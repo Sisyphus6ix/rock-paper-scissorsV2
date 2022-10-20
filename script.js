@@ -42,21 +42,26 @@ const playRound = (playerSelection, computerSelection) => {
     const p = document.createElement('p')
     if (playerSelection === computerSelection){
         p.innerText =  `Its a tie! You both tried using ${playerSelection}`
+        results.innerHTML=''
         results.appendChild(p)
     } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
         p.innerText = 'The player won! Rock breaks scissors'
+        results.innerHTML=''
         results.appendChild(p)
         playerScore++
     } else if (playerSelection === 'paper' && computerSelection === 'rock'){
         p.innerText = 'The player won! Paper covers rock'
+        results.innerHTML=''
         results.appendChild(p)
         playerScore++
     } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
         p.innerText = 'The player won! Scissors cuts paper'
+        results.innerHTML=''
         results.appendChild(p)
         playerScore++
     } else {
         p.innerText = `You lost! ${computerSelection} beats ${playerSelection}`
+        results.innerHTML=''
         results.appendChild(p)
         computerScore++
     }
