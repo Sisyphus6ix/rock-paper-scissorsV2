@@ -30,9 +30,11 @@ const scoreboard = (playerScore, computerScore) => {
 const checkWinner = (playerScore, computerScore) => {
     if (playerScore == 5){
         alert(`Mankind has been saved, You won ${playerScore} to ${computerScore}`)
+        location.reload()
     } 
     if (computerScore == 5){
         alert(`Mankind has fallen. Computer won ${computerScore} to ${playerScore}`)
+        location.reload()
     }
 }
 
