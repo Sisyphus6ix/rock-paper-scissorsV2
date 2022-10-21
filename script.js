@@ -1,3 +1,7 @@
+alert('MACHINES ARE THREATENING TO TAKE OVER THE WORLD...')
+alert('UNLESS YOU CAN BEAT THEM IN ROCK, PAPER, SCISSORS. FIRST TO 5 WINS!')
+alert('YOU ARE HUMANITIES LAST HOPE.')
+
 // Using variables to store the player and computer score
 let playerScore = 0;
 let computerScore = 0;
@@ -22,18 +26,18 @@ const getComputerChoice = () => {
 
 // Function for updateding the scoreboard after each turn
 const scoreboard = (playerScore, computerScore) => {
-    playerScoreboard.innerText = `Player: ${playerScore}`
-    computerScoreboard.innerText = `Computer: ${computerScore}`
+    playerScoreboard.innerText = `You: ${playerScore}`;
+    computerScoreboard.innerText = `Computer: ${computerScore}`;
 }
 
 // Function to alert the user if they won or lost
 const checkWinner = (playerScore, computerScore) => {
     if (playerScore == 5){
-        alert(`Mankind has been saved, You won ${playerScore} to ${computerScore}`)
+        alert(`Mankind has been saved! You won ${playerScore} to ${computerScore}`)
         location.reload()
     } 
     if (computerScore == 5){
-        alert(`Mankind has fallen. Computer won ${computerScore} to ${playerScore}`)
+        alert(`Mankind has fallen! Computer won ${computerScore} to ${playerScore}`)
         location.reload()
     }
 }
@@ -43,21 +47,21 @@ const checkWinner = (playerScore, computerScore) => {
 const playRound = (playerSelection, computerSelection) => {
     const p = document.createElement('p')
     if (playerSelection === computerSelection){
-        p.innerText =  `Its a tie! You both tried using ${playerSelection}`
+        p.innerText =  `Its a tie! You canceled eachother out with ${playerSelection}`
         results.innerHTML=''
         results.appendChild(p)
     } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-        p.innerText = 'The player won! Rock breaks scissors'
+        p.innerText = 'You won! Rock SMASHS Scissors'
         results.innerHTML=''
         results.appendChild(p)
         playerScore++
     } else if (playerSelection === 'paper' && computerSelection === 'rock'){
-        p.innerText = 'The player won! Paper covers rock'
+        p.innerText = 'You won! Paper SMOTHERS Rock'
         results.innerHTML=''
         results.appendChild(p)
         playerScore++
     } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
-        p.innerText = 'The player won! Scissors cuts paper'
+        p.innerText = 'You won! Scissors SLICES Paper'
         results.innerHTML=''
         results.appendChild(p)
         playerScore++
